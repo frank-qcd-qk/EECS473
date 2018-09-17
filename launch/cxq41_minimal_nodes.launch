@@ -1,0 +1,5 @@
+<launch> 
+<node name= "minimal_controller" pkg= "cxq41_minimal_nodes" type= "minimal_controller" /> 
+<node name= "minimal_simulator" pkg= "cxq41_minimal_nodes" type= "minimal_simulator" /> 
+<node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
+</launch> 

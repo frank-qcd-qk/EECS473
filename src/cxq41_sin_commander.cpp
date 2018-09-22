@@ -2,6 +2,7 @@
 #include <ros/ros.h> 
 #include <std_msgs/Float64.h> 
 #include <string>
+
 //Project specific include:
 #include <math.h>
 #include <iostream>
@@ -16,11 +17,9 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "sin_commander"); //name this node 
     // when this compiled code is run, ROS will recognize it as a node called sin_commander" 
     ros::NodeHandle nh; // node handle
-    //----Do not change above as they are critical for operation normally
-    
+    //----Do not change above as they are critical for operation normally    
     //Announcer for topic
     ros::Publisher sinWave_outputter = nh.advertise<std_msgs::Float64>("vel_cmd", 1);
-
 
     //IO handler
     //Get input for amplitude:
@@ -50,6 +49,7 @@ int main(int argc, char **argv) {
     }
     ROS_INFO("The frequency you set is: %f", frequency.data);
     ROS_INFO("Both input obtained! Now operating!.......");
+
     //Initiate sin_output
     sin_output.data = 0.00;
     //Initiate Time for sine generation:
@@ -60,7 +60,8 @@ int main(int argc, char **argv) {
     double dt = 0.1;
     double sample_rate = 1.0 / dt; 
     ros::Rate naptime(sample_rate);
-    
+
+
     while (ros::ok()) {
         //sin wave is generated below:
         sin_output.data = amplitude.data * sin(2.00 * frequency.data * PI * current_time);
@@ -71,6 +72,5 @@ int main(int argc, char **argv) {
         ros::spinOnce(); 
         naptime.sleep();
     }
-
     return 0; // Not used unless some dummy kills roscore 
 } 

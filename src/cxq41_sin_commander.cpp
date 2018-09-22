@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
     }
     ROS_INFO("The amplitude you set is: %f", amplitude.data);
     //Get input for frequency:
-     frequency.data = 0.00;
+    frequency.data = 0.00;
     std::cout << std::endl;
     std::cout << "Please input the frequency you want to set.......(Use CTRL+C to Quit)" << std::endl << "Input: ";
     std::cin >> frequency.data;

@@ -11,5 +11,3 @@ If you download the code and still can't figure out how to run it, go get some h
 ## Running tests/demos
 
 I guess I will just post what grade I get for this as a "demo" of if this works or not....
-
-    

@@ -1,4 +1,4 @@
-# cxq41_minimal_nodes
+# cxq41_ps1 (cxq41_minimal_nodes)
 
 Code created by CXQ41@case.edu, the great and smart Frank Qian (Just kidding)...
 
